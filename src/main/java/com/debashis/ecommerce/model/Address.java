@@ -1,4 +1,4 @@
-package com.debashis.ecommerce.customer;
+package com.debashis.ecommerce.model;
 
 import org.springframework.validation.annotation.Validated;
 

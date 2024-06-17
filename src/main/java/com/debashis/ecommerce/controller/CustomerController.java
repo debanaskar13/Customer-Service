@@ -1,4 +1,4 @@
-package com.debashis.ecommerce.customer;
+package com.debashis.ecommerce.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.debashis.ecommerce.customer.dto.CustomerPageResponse;
-import com.debashis.ecommerce.customer.dto.CustomerRequest;
-import com.debashis.ecommerce.customer.dto.CustomerResponse;
+import com.debashis.ecommerce.dto.CustomerPageResponse;
+import com.debashis.ecommerce.dto.CustomerRequest;
+import com.debashis.ecommerce.dto.CustomerResponse;
+import com.debashis.ecommerce.service.impl.CustomerServiceImpl;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -23,7 +24,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CustomerController {
 
-    private final CustomerService service;
+    private final CustomerServiceImpl service;
 
     @PostMapping
     public ResponseEntity<String> createCustomer(@RequestBody @Valid CustomerRequest request) {
