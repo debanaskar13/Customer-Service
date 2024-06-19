@@ -5,3 +5,5 @@ spring:
       - optional:file:.env[.properties]
   application:
     name: customer-service
+  profiles:
+    active: dev
